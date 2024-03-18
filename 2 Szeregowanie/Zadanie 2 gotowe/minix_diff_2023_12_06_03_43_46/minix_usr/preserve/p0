@@ -1,0 +1,17 @@
+
+#include <lib.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char* argv[])
+{
+	message m;
+	int group = 0;
+    int new_quants = 1;
+	group = m.m1_i1 = atoi(argv[1]);
+	new_quants = m.m1_i2 = atoi(argv[2]);
+	_syscall(MM, SETQUANTS, &m);
+	printf("Group %d set quants to %d \n", group, new_quants);
+	return 0;
+}
+
